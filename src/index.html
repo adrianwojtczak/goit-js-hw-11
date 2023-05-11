@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>goit-js-hw-11</title>
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="container">
+        <div class="form-wrapper">
+          <form class="search-form" id="search-form">
+            <input
+              type="text"
+              name="searchQuery"
+              autocomplete="off"
+              placeholder="Search images..."
+            />
+            <button type="submit"></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="gallery">
+        <!-- Obraz karty -->
+      </div>
+      <div class="load-wrapper">
+        <button type="button" class="load-more">Load more</button>
+      </div>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,137 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 0 30px;
+  background-color: blue;
+}
+
+.form-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  padding: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.load-more {
+  margin: 0 auto;
+  height: 40px;
+  width: 120px;
+  font-weight: bold;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.load-more:hover {
+  transform: scale(1.2);
+}
+
+.load-wrapper {
+  display: flex;
+  margin: 30px 0 60px;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 5px;
+  max-width: calc((100% / 4) - 10px);
+  height: auto;
+  border: 1px solid rgba(220, 220, 220, 1);
+  border-radius: 5px;
+  transition: all 250ms ease;
+}
+
+.photo-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.photo-card__link {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.photo-card img {
+  flex-grow: 1;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.search-form {
+  display: inline-block;
+  position: relative;
+}
+
+.search-form input {
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.search-form button {
+  position: absolute;
+  top: 2;
+  right: 2;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  background-image: url(/src/images/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.search-form button:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .photo-card {
+    max-width: calc((100% / 2) - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-card {
+    max-width: calc((100%) - 10px);
+  }
+}
