@@ -79,11 +79,12 @@ async function onFormSubmit(ev) {
   try {
     gallery.innerHTML = '';
 
+    loadMoreBtn.classList.remove('is-hidden');
+
     currentPage = 1;
     currentQuery = inputValue;
 
     await performSearch(inputValue);
-    loadMoreBtn.classList.remove('is-hidden');
   } catch (error) {
     console.log(error);
   }
