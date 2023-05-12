@@ -43,9 +43,7 @@ async function performSearch(query) {
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
-  }
-
-  if (currentPage === 1) {
+  } else if (currentPage === 1) {
     Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
   }
 
